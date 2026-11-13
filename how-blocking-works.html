@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How site blocking works · Redirect</title>
+  <meta name="description" content="Redirect's optional site blocking in plain language: on-device DNS matching, what's on the list, what gets around it, and why you can always turn it off.">
+  <meta name="theme-color" content="#1F4A3D">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://redirect.hikmasolutions.co.za/how-blocking-works.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Redirect">
+  <meta property="og:title" content="How site blocking works · Redirect">
+  <meta property="og:description" content="Redirect's optional site blocking in plain language: on-device DNS matching, what's on the list, what gets around it, and why you can always turn it off.">
+  <meta property="og:url" content="https://redirect.hikmasolutions.co.za/how-blocking-works.html">
+  <meta property="og:image" content="https://redirect.hikmasolutions.co.za/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pip, the Redirect caterpillar, on a pine-green background with the words: A calm pause, when it matters.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How site blocking works · Redirect">
+  <meta name="twitter:description" content="Redirect's optional site blocking in plain language: on-device DNS matching, what's on the list, what gets around it, and why you can always turn it off.">
+  <meta name="twitter:image" content="https://redirect.hikmasolutions.co.za/og.png">
+  <link rel="stylesheet" href="site.css">
+  <script src="site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="top">
+    <header class="site-header">
+      <div class="shell">
+        <a class="brand" href="index.html"><svg class="pip-mark" viewBox="18 24 72 54" aria-hidden="true" focusable="false"><g transform="translate(-4.5,-6) translate(54,54) scale(1.22) translate(-54,-54)"><g class="pm-body"><path fill="none" stroke="#4E7F46" stroke-width="1.4" stroke-linecap="round" d="M72.5,55.2 Q74,51 77.5,48.6 M76,56.6 Q79,54 82.4,53.4"/><path fill="#E3A857" d="M76,48.3a1.9,1.9 0 1,0 3.8,0a1.9,1.9 0 1,0 -3.8,0ZM81,53.2a1.9,1.9 0 1,0 3.8,0a1.9,1.9 0 1,0 -3.8,0Z"/><g fill="#A9D07F" stroke="#4E7F46" stroke-width="1.1"><circle cx="38.03" cy="68.81" r="6"/><circle cx="38.03" cy="57.19" r="7.2"/><circle cx="45.5" cy="48.28" r="7.92"/><circle cx="56.95" cy="46.26" r="8.4"/><circle cx="67.02" cy="52.07" r="8.4"/><circle cx="71" cy="63" r="8.6"/></g><g fill="#E4F2C8" fill-opacity=".55"><circle cx="36.28" cy="66.81" r="1.6"/><circle cx="35.93" cy="54.79" r="1.92"/><circle cx="43.19" cy="45.64" r="2.11"/><circle cx="54.5" cy="43.46" r="2.24"/><circle cx="64.57" cy="49.27" r="2.24"/><circle cx="68.2" cy="59.4" r="2.6"/></g><circle cx="71.6" cy="67.4" r="1.9" fill="#F2A58E" fill-opacity=".53"/><circle cx="74.2" cy="62.2" r="1.7" fill="#1C2B24"/><circle cx="73.6" cy="61.5" r=".55" fill="#fff"/></g></g></svg><span>Redirect</span></a>
+        <nav class="nav" aria-label="Main">
+          <a class="nav-text" href="index.html#pause">How it works</a>
+          <a class="nav-text" href="how-blocking-works.html" aria-current="page">Blocking</a>
+          <a class="nav-text" href="privacy.html">Privacy</a>
+          <a class="nav-cta" href="index.html#get-it" data-play-link><span data-play-label>Coming soon to Google Play</span></a>
+          <details class="menu">
+            <summary>Menu</summary>
+            <div class="menu-panel">
+              <a href="index.html#pause">How it works</a>
+              <a href="how-blocking-works.html" aria-current="page">How blocking works</a>
+              <a href="privacy.html">Privacy</a>
+              <a href="faq.html">Questions</a>
+              <a href="for-allies.html">For allies</a>
+              <a href="why-no-streaks.html">Why no streaks</a>
+              <a href="press.html">Press</a>
+              <a class="menu-cta" href="index.html#get-it" data-play-link><span data-play-label>Coming soon to Google Play</span></a>
+            </div>
+          </details>
+        </nav>
+      </div>
+    </header>
+    <div class="shell page-hero">
+      <p class="eyebrow">How blocking works</p>
+      <h1>Useful friction, explained plainly.</h1>
+      <p class="lede">Site blocking is optional and off until you turn it on. Here is exactly what it does, what it can't do, and why it isn't a lock.</p>
+    </div>
+  </div>
+  <main id="main" class="page-body">
+    <div class="narrow prose">
+      <h2>The short version</h2>
+      <p>Before a browser or app can open a site, your phone asks a DNS server a simple question: "where is this name?" When you turn on site blocking, Redirect starts a small VPN that runs entirely on your phone and sees those questions. If the name is on the blocklist, the question is refused on the phone and the site can't be reached. If it isn't, the question goes on to your phone's usual DNS, just as it would without Redirect.</p>
+
+      <ol class="flow" aria-label="What happens when you open a site">
+        <li><strong>You open a site</strong><span>in a browser or an app.</span></li>
+        <li><strong>Your phone asks for its address</strong><span>a DNS question with the site's name.</span></li>
+        <li><strong>Redirect checks the name</strong><span>against the list, on your phone.</span></li>
+        <li><strong>On the list: refused</strong><span>The site can't be reached. Not on it: the question goes on to your phone's usual DNS.</span></li>
+      </ol>
+      <p>When a site is blocked, Redirect can offer a pause: a quiet notification that never names the site, or the pause card if app pauses are on. You can turn the notification off.</p>
+
+      <h2>What's on the list</h2>
+      <ul>
+        <li><strong>The standard list:</strong> the community-maintained OISD <code>nsfw-small</code> list of known adult domains (the bundled July 2026 snapshot has about 18,000 entries), plus a small list Redirect adds to it.</li>
+        <li><strong>Your allowlist:</strong> sites you let through always win over the standard list.</li>
+        <li><strong>Updates only when you ask:</strong> nothing refreshes by itself. If you tap <strong>Update now</strong>, Redirect downloads the latest OISD list over HTTPS from <code>nsfw-small.oisd.nl</code>. That host can see ordinary request details such as your IP address and the time; the request contains none of your Redirect data.</li>
+      </ul>
+
+      <h2>What it sees, and what it doesn't</h2>
+      <p>Matching happens on your phone. Redirect does not proxy page content, and it does not look at images, video, or what's on a page. It has no server of its own, so the names your phone looks up are never sent to Redirect. Questions that aren't blocked are handed to Android's own resolver on your normal connection, so your Android DNS settings apply, including Private DNS if you use it. Redirect opens no DNS connection of its own and has no fallback resolver: if there is no connection, the lookup simply fails. It keeps no record of the names your phone looks up. Your network's resolver or your Private DNS provider can see those questions under their own terms, as they could without Redirect. Without Private DNS, the questions travel unencrypted, so anyone watching the network can read them too.</p>
+
+      <h2>What gets around it</h2>
+      <p>DNS blocking is useful friction, not a wall. These all bypass it:</p>
+      <ul>
+        <li><strong>Private DNS</strong> in Android's settings (DNS-over-HTTPS or DNS-over-TLS).</li>
+        <li><strong>Secure DNS in a browser</strong> set to a custom provider. In Chrome, keep Settings › Privacy and security › Use secure DNS on "current service provider". Redirect can't see or test another app's Secure DNS setting.</li>
+        <li><strong>Apps with their own resolver,</strong> IPv6 DNS, and DNS-over-TCP.</li>
+        <li><strong>Another VPN.</strong> Android allows one active VPN at a time.</li>
+        <li><strong>A site you opened just before</strong> you blocked it may keep working for a few minutes, and a site can have other addresses.</li>
+      </ul>
+      <p>To check it is working, open Protection › <strong>Test site blocking</strong>: it verifies the tunnel, the blocklist, and the local filter.</p>
+
+      <h2>Why you can turn it off</h2>
+      <p>Redirect is built for an adult who chose it. It is not tamper-proof software and it is not a lock someone else holds. Every protection is off until you turn it on, and you decide how much friction to add:</p>
+      <ul>
+        <li><strong>Gentle</strong> (the default): turning it off takes effect straight away. On an app pause, &ldquo;Open anyway&rdquo; counts down and can be used after 10 seconds.</li>
+        <li><strong>Committed:</strong> changes that lower protection wait for the delay you chose: 15 minutes, 1 hour, 24 hours or 3 days. App pauses don't offer &ldquo;Open anyway&rdquo;.</li>
+        <li><strong>Anchor:</strong> follows the same waiting period as Committed, and app pauses don't offer &ldquo;Open anyway&rdquo; either.</li>
+      </ul>
+      <p>Uninstalling always removes it. That is deliberate: friction chosen by your calm self for a moment when decisions feel harder, never a trap.</p>
+
+      <div class="callout limit-box"><p><strong>In plain words:</strong> Redirect blocks known adult domains on this phone, while it can see the DNS question. It can't block everything, and it isn't parental control.</p></div>
+
+      <h2>The other guardrail</h2>
+      <h3>App pause</h3>
+      <p>For apps you choose, Redirect can notice which app is in the foreground and place your pause card over it, using Android Accessibility. It reads only the app's package name. It does not read screen text, take screenshots, type, or perform gestures, and the pause can be passed through.</p>
+      <p>The Accessibility service can be switched off in Android Settings. More detail is in the <a href="privacy.html">privacy policy</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html"><svg class="pip-mark" viewBox="18 24 72 54" aria-hidden="true" focusable="false"><g transform="translate(-4.5,-6) translate(54,54) scale(1.22) translate(-54,-54)"><g class="pm-body"><path fill="none" stroke="#4E7F46" stroke-width="1.4" stroke-linecap="round" d="M72.5,55.2 Q74,51 77.5,48.6 M76,56.6 Q79,54 82.4,53.4"/><path fill="#E3A857" d="M76,48.3a1.9,1.9 0 1,0 3.8,0a1.9,1.9 0 1,0 -3.8,0ZM81,53.2a1.9,1.9 0 1,0 3.8,0a1.9,1.9 0 1,0 -3.8,0Z"/><g fill="#A9D07F" stroke="#4E7F46" stroke-width="1.1"><circle cx="38.03" cy="68.81" r="6"/><circle cx="38.03" cy="57.19" r="7.2"/><circle cx="45.5" cy="48.28" r="7.92"/><circle cx="56.95" cy="46.26" r="8.4"/><circle cx="67.02" cy="52.07" r="8.4"/><circle cx="71" cy="63" r="8.6"/></g><g fill="#E4F2C8" fill-opacity=".55"><circle cx="36.28" cy="66.81" r="1.6"/><circle cx="35.93" cy="54.79" r="1.92"/><circle cx="43.19" cy="45.64" r="2.11"/><circle cx="54.5" cy="43.46" r="2.24"/><circle cx="64.57" cy="49.27" r="2.24"/><circle cx="68.2" cy="59.4" r="2.6"/></g><circle cx="71.6" cy="67.4" r="1.9" fill="#F2A58E" fill-opacity=".53"/><circle cx="74.2" cy="62.2" r="1.7" fill="#1C2B24"/><circle cx="73.6" cy="61.5" r=".55" fill="#fff"/></g></g></svg><span>Redirect</span></a>
+          <p>A private Android app that blocks known adult sites and helps in the moment an urge shows up: a short guided pause, your own plans, and optional site blocking.</p>
+          <p>Redirect is a self-support tool, not medical treatment, and does not guarantee that content cannot be reached.</p>
+        </div>
+        <nav class="footer-links" aria-label="Redirect">
+          <h2>Redirect</h2>
+          <a href="index.html#pause">How it works</a>
+          <a href="how-blocking-works.html">How blocking works</a>
+          <a href="faq.html">Questions</a>
+          <a href="why-no-streaks.html">Why no streaks</a>
+        </nav>
+        <nav class="footer-links" aria-label="Trust and press">
+          <h2>Trust</h2>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="index.html#honesty">Honest limits</a>
+          <a href="for-allies.html">For allies</a>
+          <a href="press.html">Press</a>
+        </nav>
+        <div class="footer-links">
+          <h2>Contact</h2>
+          <span>Support: <a href="mailto:support@hikmasolutions.co.za">support@hikmasolutions.co.za</a></span>
+          <span>Made in South Africa</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>No account. No analytics. This website sets no cookies and loads nothing from anyone else. Requires Android 11 or later.</p>
+        <p>Domain blocklist courtesy of <a href="https://oisd.nl/">OISD</a> (GPLv3). Redirect is not affiliated with or endorsed by OISD.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

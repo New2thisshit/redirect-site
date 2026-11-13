@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://redirect.hikmasolutions.co.za/sitemap.xml
