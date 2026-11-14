@@ -74,7 +74,7 @@
 
     <article class="policy" id="policy-content">
       <h1>Redirect Privacy Policy</h1>
-      <p class="effective"><strong>Effective date: November 12, 2026</strong></p>
+      <p class="effective"><strong>Effective date: November 14, 2026</strong></p>
 
       <h2 id="what">What Redirect is</h2>
       <p>Redirect is a local-first Android app for self-support, reflection, and optional protection tools. It can provide check-ins, journaling, app guardrails, and on-device DNS filtering.</p>
@@ -121,8 +121,8 @@
       <p>Redirect does not capture screenshots and has no image-classification feature.</p>
 
       <h2 id="network">Network traffic that does occur</h2>
-      <p>When DNS protection is active, blocked-domain matching happens on your device. A blocked name is answered on your phone and is not sent anywhere. Redirect does not log or store the names your phone looks up, blocked or not. Other DNS questions are handed to Android's own resolver on your phone's regular connection (Wi-Fi or mobile data), so your Android DNS settings apply, including Private DNS if you have turned it on. Redirect opens no DNS connection of its own and has no fallback resolver; with no connection, or no answer in time, the app simply gets an error. Your network's resolver or your Private DNS provider, and network observers, may receive those DNS questions under their own terms. Redirect does not operate a DNS collection server.</p>
-      <p>DNS filtering is not comprehensive. Private DNS (DNS-over-HTTPS or DNS-over-TLS), custom resolvers inside apps, IPv6 DNS, and DNS-over-TCP bypass it. Redirect does not inspect or filter images, video, or page content.</p>
+      <p>When DNS protection is active, blocked-domain matching happens on your device. A blocked name is answered on your phone and is not sent anywhere. Redirect does not log or store the names your phone looks up, blocked or not. Other DNS questions are handed to Android's own resolver on your phone's regular connection (Wi-Fi or mobile data), so your Android DNS settings apply. Site blocking doesn't run while Private DNS is set to a named provider. Redirect opens no DNS connection of its own and has no fallback resolver; with no connection, or no answer in time, the app simply gets an error. Your network's resolver, and network observers, may receive those DNS questions under their own terms. Redirect does not operate a DNS collection server.</p>
+      <p>DNS filtering is not comprehensive. Secure DNS inside apps or browsers, custom resolvers inside apps, IPv6 DNS, and DNS-over-TCP bypass it. Redirect does not inspect or filter images, video, or page content.</p>
       <p>If you choose <strong>Update now</strong>, Redirect downloads the OISD blocklist over HTTPS from <code>nsfw-small.oisd.nl</code>. The host or its CDN may receive ordinary request metadata such as your IP address, request time, and user agent. The request does not contain your journals, check-ins, urge history, allowlist, or DNS-query history.</p>
       <p>The optional weekly reminder is a local notification scheduled on your phone. It makes no network request and sends nothing to Redirect or anyone else.</p>
       <p>If you create an export, Redirect writes an unencrypted, human-readable JSON file to the destination you select through Android. That destination may be local storage or a provider you choose. After export, the file is outside Redirect's control. Exports include your profile (with the name and message you wrote for someone to message), urge events, check-ins, journal entries, weekly reflections, if-then plans, your own reason words, lesson progress, and protection toggles, but intentionally exclude guarded app package names, allowed domains, and protection-change/cooldown details, because exported files may be shared with a supporter.</p>

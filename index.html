@@ -211,7 +211,7 @@
           <article class="ledger-row" role="listitem">
             <h3>Site blocking</h3>
             <div class="does"><span class="ledger-label">What it does</span><p>An on-device VPN compares DNS lookups with the community-maintained OISD list of known adult domains. Your personal allowlist always wins. Android shows a VPN indicator while it is on. When a site is blocked, a quiet notification can offer a pause.</p></div>
-            <div class="stops"><span class="ledger-label">Where it stops</span><p>Private DNS, custom resolvers, IPv6 DNS, DNS-over-TCP, and some apps can bypass it. Redirect does not inspect images, video, or page content.</p></div>
+            <div class="stops"><span class="ledger-label">Where it stops</span><p>It waits while Private DNS is set to a named provider. Custom resolvers, IPv6 DNS, DNS-over-TCP, and some apps can bypass it. Redirect does not inspect images, video, or page content.</p></div>
           </article>
           <article class="ledger-row" role="listitem">
             <h3>App pauses</h3>
@@ -241,7 +241,7 @@
           <div class="b-cross">
             <p class="b-title">The only two things Redirect sends across it</p>
             <ol class="b-arrows">
-              <li><strong>DNS questions</strong><span>to your phone's usual DNS (your network, or your Private DNS provider), only while site blocking is on.</span></li>
+              <li><strong>DNS questions</strong><span>to your phone's usual DNS (your network), only while site blocking is on.</span></li>
               <li><strong>A blocklist update you request</strong><span>from the OISD list host, only when you tap Update now.</span></li>
             </ol>
             <p class="b-else">Anything else leaves only if you export or share it yourself.</p>

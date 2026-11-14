@@ -74,7 +74,7 @@
           <div class="answer">
             <p>Your journal, check-ins, urge history, plans, and settings don't. Redirect has no analytics, no ads, no crash-reporting service, and no server of its own. Only three things can leave the phone, and each one is your choice:</p>
             <ul>
-              <li>While site blocking is on, DNS questions that aren't blocked go to Android's own resolver, so they reach your network's DNS or your Private DNS provider, as they would without Redirect.</li>
+              <li>While site blocking is on, DNS questions that aren't blocked go to Android's own resolver, so they reach your network's DNS, as they would without Redirect. Site blocking doesn't run while Private DNS is set to a named provider.</li>
               <li>If you tap <strong>Update now</strong>, the blocklist is downloaded from the OISD host.</li>
               <li>Files you export or share yourself, such as a JSON export.</li>
             </ul>
@@ -96,7 +96,7 @@
         <li><details>
           <summary>Does it work with Private DNS or Secure DNS?</summary>
           <div class="answer">
-            <p>No, and it's better to know that up front. Android's Private DNS (DNS-over-HTTPS or DNS-over-TLS) and a custom Secure DNS provider in a browser send lookups around Redirect, so site blocking can't see them. In Chrome, keep Use secure DNS on "current service provider". Apps with their own resolver, IPv6 DNS, DNS-over-TCP, and other VPNs bypass it too.</p>
+            <p>Not with a named provider, and it's better to know that up front. While Android's Private DNS is set to a named provider, site blocking can't run; it waits until Private DNS is set to Automatic or Off. A custom Secure DNS provider in a browser sends lookups around Redirect, so site blocking can't see them. In Chrome, keep Use secure DNS on "current service provider". Apps with their own resolver, IPv6 DNS, DNS-over-TCP, and other VPNs bypass it too.</p>
           </div>
         </details></li>
         <li><details>

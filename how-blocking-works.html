@@ -81,12 +81,12 @@
       </ul>
 
       <h2>What it sees, and what it doesn't</h2>
-      <p>Matching happens on your phone. Redirect does not proxy page content, and it does not look at images, video, or what's on a page. It has no server of its own, so the names your phone looks up are never sent to Redirect. Questions that aren't blocked are handed to Android's own resolver on your normal connection, so your Android DNS settings apply, including Private DNS if you use it. Redirect opens no DNS connection of its own and has no fallback resolver: if there is no connection, the lookup simply fails. It keeps no record of the names your phone looks up. Your network's resolver or your Private DNS provider can see those questions under their own terms, as they could without Redirect. Without Private DNS, the questions travel unencrypted, so anyone watching the network can read them too.</p>
+      <p>Matching happens on your phone. Redirect does not proxy page content, and it does not look at images, video, or what's on a page. It has no server of its own, so the names your phone looks up are never sent to Redirect. Questions that aren't blocked are handed to Android's own resolver on your normal connection, so your Android DNS settings apply. Site blocking doesn't run while Private DNS is set to a named provider. Redirect opens no DNS connection of its own and has no fallback resolver: if there is no connection, the lookup simply fails. It keeps no record of the names your phone looks up. Your network's resolver can see those questions under their own terms, as it could without Redirect. The questions may travel unencrypted, so anyone watching the network can read them too.</p>
 
       <h2>What gets around it</h2>
       <p>DNS blocking is useful friction, not a wall. These all bypass it:</p>
       <ul>
-        <li><strong>Private DNS</strong> in Android's settings (DNS-over-HTTPS or DNS-over-TLS).</li>
+        <li><strong>Private DNS</strong> set to a named provider in Android's settings. Site blocking can't run then; it waits until Private DNS is set to Automatic or Off.</li>
         <li><strong>Secure DNS in a browser</strong> set to a custom provider. In Chrome, keep Settings › Privacy and security › Use secure DNS on "current service provider". Redirect can't see or test another app's Secure DNS setting.</li>
         <li><strong>Apps with their own resolver,</strong> IPv6 DNS, and DNS-over-TCP.</li>
         <li><strong>Another VPN.</strong> Android allows one active VPN at a time.</li>
