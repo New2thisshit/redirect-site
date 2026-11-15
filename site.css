@@ -1,31 +1,31 @@
 /* Redirect website: shared styles for every page. No external requests: fonts are self-hosted
    (SIL OFL; licence texts ship beside them in fonts/). Light and dark themes; ?theme=dark or
    ?theme=light forces one (site.js sets data-theme on <html>).
-   Rhythm: pine bands for the night-time moments (hero, privacy, call to action), warm paper for
-   everything you read in daylight. One ambient motion: the hero breathes, 4 s in and 6 s out. */
+   Colours are the app's own (core-ui Color.kt; docs/brand/BRAND.md): flat Pine bands for the
+   night-time moments (hero, privacy, call to action), warm paper for everything you read in daylight. One ambient motion: the hero breathes, 4 s in and 6 s out. */
 @font-face { font-family: "Fraunces"; src: url("fonts/Fraunces-Variable.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: "Figtree"; src: url("fonts/Figtree-Variable.ttf") format("truetype"); font-weight: 300 900; font-display: swap; }
 
 :root {
   color-scheme: light;
-  --paper: #F5F1E8;
-  --paper-2: #ECE6D9;
-  --surface: #FFFCF6;
-  --ink: #12302A;
-  --muted: #4A5A55;
-  --line: #D8D3C6;
-  --accent: #1D5C49;
+  --paper: #F6F2EA;
+  --paper-2: #EDE7DC;
+  --surface: #FFFCF7;
+  --ink: #1C211E;
+  --muted: #585D57;
+  --line: #E0D9CC;
+  --accent: #24584A;
   --tick: #3E8467;
   --stop: #8A6A3F;
   --stop-soft: #F1E7D4;
-  --btn: #147C61;
-  --btn-hover: #0F6A53;
+  --btn: #24584A;
+  --btn-hover: #1F4A3D;
   --frame: #1B2A26;
   --shadow: 0 30px 60px -20px rgba(18, 48, 42, .28);
   /* Pine bands look the same in both themes. */
   --pine: #1F4A3D;
-  --pine-deep: #153429;
-  --pine-ink: #F5F1E8;
+  --pine-deep: #15352C;
+  --pine-ink: #F6F2EA;
   --pine-muted: #CFDDD5;
   --pine-sage: #9FCBB3;
   --pine-line: rgba(207, 221, 213, .2);
@@ -173,7 +173,7 @@ code { font-size: .92em; padding: .1em .35em; border-radius: 6px; background: va
 .menu-panel :focus-visible { outline-color: var(--ink); }
 
 /* ---------- Home hero ---------- */
-.hero { overflow: hidden; background: radial-gradient(120% 90% at 85% 20%, #285A4A 0, transparent 60%), var(--pine); }
+.hero { overflow: hidden; background: var(--pine); }
 .hero-grid {
   display: grid; grid-template-columns: minmax(0, 1fr) 340px; align-items: center;
   gap: clamp(40px, 6vw, 96px); padding: clamp(32px, 5vw, 72px) 0 clamp(48px, 6vw, 88px);
@@ -202,7 +202,7 @@ code { font-size: .92em; padding: .1em .35em; border-radius: 6px; background: va
   position: absolute; left: 50%; top: 50%; border: 1px solid rgba(159, 203, 179, .28); border-radius: 50%;
   transform: translate(-50%, -50%) scale(.9); animation: halo 10s ease-in-out infinite;
 }
-.halo i:nth-child(1) { width: 440px; height: 440px; background: radial-gradient(circle, rgba(159, 203, 179, .14), transparent 70%); }
+.halo i:nth-child(1) { width: 440px; height: 440px; background: rgba(159, 203, 179, .05); }
 .halo i:nth-child(2) { width: 640px; height: 640px; border-color: rgba(159, 203, 179, .18); animation-delay: -.25s; }
 .halo i:nth-child(3) { width: 860px; height: 860px; border-color: rgba(159, 203, 179, .1); animation-delay: -.5s; }
 @keyframes halo { 0%, 100% { transform: translate(-50%, -50%) scale(.88); } 40% { transform: translate(-50%, -50%) scale(1.03); } }
@@ -319,7 +319,7 @@ code { font-size: .92em; padding: .1em .35em; border-radius: 6px; background: va
 
 /* ---------- Privacy: the phone as a boundary ---------- */
 .on-pine { color: var(--pine-ink); background: var(--pine); }
-.privacy-band { background: radial-gradient(90% 70% at 15% 35%, #275646 0, transparent 60%), var(--pine); }
+.privacy-band { background: var(--pine); }
 .boundary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 0; margin: 0 0 clamp(56px, 7vw, 88px); }
 .b-title { margin-bottom: 18px; color: var(--pine-sage); font-size: 15px; font-weight: 700; }
 .b-phone {
