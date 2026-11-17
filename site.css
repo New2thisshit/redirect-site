@@ -165,11 +165,11 @@ code { font-size: .92em; padding: .1em .35em; border-radius: 6px; background: va
   position: absolute; right: 0; top: calc(100% + 10px); display: grid; width: min(280px, calc(100vw - 32px)); padding: 8px;
   border: 1px solid var(--line); border-radius: 20px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow);
 }
-.menu-panel a { display: flex; min-height: 44px; align-items: center; padding: 0 14px; border-radius: 12px; font-weight: 600; text-decoration: none; }
-.menu-panel a:hover { background: var(--paper-2); }
+.menu-panel a { display: flex; min-height: 44px; align-items: center; padding: 0 14px; border-radius: 12px; font-weight: 600; color: var(--ink); text-decoration: none; }
+.menu-panel a:hover { background: var(--paper-2); color: var(--ink); }
 .menu-panel a[aria-current="page"] { color: var(--accent); text-decoration: underline; }
 .menu-panel .menu-cta { margin-top: 6px; justify-content: center; background: var(--btn); color: #fff; font-weight: 700; }
-.menu-panel .menu-cta:hover { background: var(--btn-hover); }
+.menu-panel .menu-cta:hover { background: var(--btn-hover); color: #fff; }
 .menu-panel :focus-visible { outline-color: var(--ink); }
 
 /* ---------- Home hero ---------- */
