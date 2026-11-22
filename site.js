@@ -6,10 +6,10 @@
 const SITE_CONFIG = {
   // Google Play listing, e.g. "https://play.google.com/store/apps/details?id=com.redirect.app".
   // Empty: every Play button reads "Coming soon to Google Play" and leads to the waitlist section.
-  PLAY_STORE_URL: "",
+  PLAY_STORE_URL: "https://play.google.com/store/apps/details?id=com.redirect.app",
   // true while that listing is in pre-registration ("Pre-register on Google Play").
   // false once the app is live ("Get it on Google Play"). Ignored while PLAY_STORE_URL is empty.
-  PLAY_PREREGISTRATION: true,
+  PLAY_PREREGISTRATION: false,
   // The site's address, with no trailing slash. The <head> of every page, sitemap.xml, robots.txt and
   // the CNAME file (for GitHub Pages) carry it too: change them all together (see PUBLISH.md).
   SITE_URL: "https://redirect.hikmasolutions.co.za",
