@@ -46,6 +46,9 @@ const SITE_CONFIG = {
     each("[data-play-label]", function (el) { el.textContent = labels[state]; });
     if (url) {
       each("[data-play-link]", function (a) { a.href = url; a.rel = "noopener"; });
+    } else {
+      // No listing yet: every Play button leads to the last section of the home page instead.
+      each("[data-play-link]", function (a) { a.href = "index.html#get-it"; a.removeAttribute("rel"); });
     }
     each("[data-play-state]", function (el) {
       el.hidden = el.getAttribute("data-play-state").split(" ").indexOf(state) === -1;
@@ -89,10 +92,13 @@ const SITE_CONFIG = {
     setInterval(tick, 1000);
   }
 
-  // Close the small-screen menu after a choice (useful for in-page links).
+  // Close the small-screen menu after a choice (useful for in-page links) or an outside click.
   function setUpMenu() {
     each(".menu", function (menu) {
       menu.addEventListener("click", function (e) { if (e.target.closest("a")) menu.removeAttribute("open"); });
+    });
+    document.addEventListener("click", function (e) {
+      each(".menu[open]", function (m) { if (!m.contains(e.target)) m.removeAttribute("open"); });
     });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") each(".menu[open]", function (m) { m.removeAttribute("open"); m.querySelector("summary").focus(); });

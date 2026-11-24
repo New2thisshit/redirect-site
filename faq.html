@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Questions · Redirect</title>
   <meta name="description" content="Straight answers about Redirect: accounts, what leaves your phone, what the VPN sees, Private DNS, turning it off, what it costs, lost phones, and treatment.">
-  <meta name="theme-color" content="#1F4A3D">
+  <meta name="theme-color" content="#1F4A3D" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1F4A3D" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://redirect.hikmasolutions.co.za/faq.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -26,6 +27,26 @@
   <meta name="twitter:image" content="https://redirect.hikmasolutions.co.za/og.png">
   <link rel="stylesheet" href="site.css">
   <script src="site.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. There is no Redirect account, no sign-in, and no email address to give. Every feature works without one, and nothing is synced to a cloud." } },
+      { "@type": "Question", "name": "What leaves my phone?", "acceptedAnswer": { "@type": "Answer", "text": "Your journal, check-ins and plans stay on your phone unless you export or share them. Redirect has no analytics, no ads, no crash-reporting service and no server of its own. Information can leave the phone in three ways: lookups that aren't blocked go to Android's own resolver while site blocking is on, a blocklist update you request downloads from the OISD host, and files you export or share yourself." } },
+      { "@type": "Question", "name": "What does the VPN see?", "acceptedAnswer": { "@type": "Answer", "text": "The VPN runs on your phone and only looks at lookups: the names of sites your phone is trying to reach. It compares each name with the blocklist on the phone. It does not carry or read page content, images, or video, and it sends nothing to Redirect." } },
+      { "@type": "Question", "name": "Does Redirect send reports to anyone?", "acceptedAnswer": { "@type": "Answer", "text": "No. There is no partner dashboard, no automatic report and no login for anyone else. Nobody is told when you change a setting or remove the app. You choose whether to share a message, an export or a diagnostic report." } },
+      { "@type": "Question", "name": "Does it work with Private DNS or Secure DNS?", "acceptedAnswer": { "@type": "Answer", "text": "Not with a named provider. While Android's Private DNS is set to a named provider, site blocking waits until Private DNS is set to Automatic or Off. A custom Secure DNS provider in a browser, apps with their own resolver, IPv6 DNS, DNS-over-TCP, and other VPNs bypass it too." } },
+      { "@type": "Question", "name": "Can I turn it off?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every guardrail is off until you turn it on. On the default level it turns off straight away; a stricter level waits for the delay you chose. Uninstalling always removes it." } },
+      { "@type": "Question", "name": "Will it block everything?", "acceptedAnswer": { "@type": "Answer", "text": "No. It blocks known adult sites, using the community-maintained OISD list, while your phone's lookups go through it. New or unlisted sites, content inside other apps, and DNS bypasses can get through." } },
+      { "@type": "Question", "name": "Can I use another VPN at the same time?", "acceptedAnswer": { "@type": "Answer", "text": "Not with site blocking on. Android allows one active VPN at a time, so site blocking and another VPN can't run together. The pause, your plans and App pauses don't use the VPN and keep working." } },
+      { "@type": "Question", "name": "Does Redirect look at my screen or my photos?", "acceptedAnswer": { "@type": "Answer", "text": "It never looks at photos, images, or video, and it never takes screenshots. App pauses are optional, and see only which app is open. Redirect doesn't ask for camera, microphone, location, contacts, photos, or SMS access." } },
+      { "@type": "Question", "name": "Is it free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Redirect is free, with no ads and nothing to buy in the app." } },
+      { "@type": "Question", "name": "I lost my phone. Is everything gone?", "acceptedAnswer": { "@type": "Answer", "text": "Redirect has no cloud backup, and Android's own app backup is switched off on purpose. If the phone is lost or wiped, Redirect can't recover your records. You can keep a readable export somewhere safe, but it can't be restored into the app." } },
+      { "@type": "Question", "name": "Is this treatment?", "acceptedAnswer": { "@type": "Answer", "text": "No. Redirect is a self-support tool for the adult using it. It isn't medical treatment, therapy, or crisis support, and it can work alongside them." } }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -55,9 +76,8 @@
       </div>
     </header>
     <div class="shell page-hero">
-      <p class="eyebrow">Questions</p>
-      <h1>Straight answers.</h1>
-      <p class="lede">Eleven things people ask before they install something like this, answered the way the app actually behaves.</p>
+      <h1>Questions before you install.</h1>
+      <p class="lede">What people ask about a blocker before they trust it. Email us if yours isn't here.</p>
     </div>
   </div>
   <main id="main" class="page-body">
@@ -72,7 +92,7 @@
         <li><details>
           <summary>What leaves my phone?</summary>
           <div class="answer">
-            <p>Your journal, check-ins, urge history, plans, and settings don't. Redirect has no analytics, no ads, no crash-reporting service, and no server of its own. Only three things can leave the phone, and each one is your choice:</p>
+            <p>Your journal, check-ins and plans stay on your phone unless you export or share them. Redirect has no analytics, no ads, no crash-reporting service and no server of its own. Information can leave the phone in three ways. Redirect does the first two itself, and only when you've turned something on:</p>
             <ul>
               <li>While site blocking is on, lookups that aren't blocked go to Android's own resolver, so they reach your network's DNS, as they would without Redirect. Site blocking doesn't run while Private DNS is set to a named provider.</li>
               <li>If you tap <strong>Update now</strong>, the blocklist is downloaded from the OISD host.</li>
@@ -88,9 +108,9 @@
           </div>
         </details></li>
         <li><details>
-          <summary>Can my partner, or anyone else, see what I do?</summary>
+          <summary>Does Redirect send reports to anyone?</summary>
           <div class="answer">
-            <p>No. Redirect sends no reports, has no dashboard, and gives no one else a login. Nobody is told when you change a setting or remove the app. The only way anything reaches another person is if you send it: an export you choose to share. An optional app lock uses your phone's own screen lock to keep the journal, progress, and plans private on a shared or borrowed phone; the pause is never locked.</p>
+            <p>No. There is no partner dashboard, no automatic report and no login for anyone else. Nobody is told when you change a setting or remove the app. You choose whether to share a message, an export or a diagnostic report. An optional app lock uses your phone's own screen lock to keep the journal, progress, and plans private on a shared or borrowed phone; the pause is never locked. Someone holding your unlocked phone may still see what's on it.</p>
           </div>
         </details></li>
         <li><details>
@@ -102,13 +122,19 @@
         <li><details>
           <summary>Can I turn it off?</summary>
           <div class="answer">
-            <p>Yes. Every guardrail is off until you turn it on. On the default level it turns off straight away; a stricter level waits for the delay you chose. Uninstalling always removes it. Redirect is not tamper-proof, by design: it's friction you choose for yourself.</p>
+            <p>Yes. Every guardrail is off until you turn it on. On the default level it turns off straight away; a stricter level waits for the delay you chose. Uninstalling always removes it. Redirect isn't tamper-proof, by design.</p>
           </div>
         </details></li>
         <li><details>
           <summary>Will it block everything?</summary>
           <div class="answer">
-            <p>No. It blocks known adult sites, using the community-maintained OISD list, while your phone's lookups go through it. New or unlisted sites, content inside other apps, and the bypasses above can all get through. It's one layer, not a complete filter.</p>
+            <p>No. It blocks known adult sites, using the community-maintained OISD list, while your phone's lookups go through it. New or unlisted sites, content inside other apps, and the bypasses above can all get through. It is one layer of friction.</p>
+          </div>
+        </details></li>
+        <li><details>
+          <summary>Can I use another VPN at the same time?</summary>
+          <div class="answer">
+            <p>Not with site blocking on. Android allows one active VPN at a time, so site blocking and another VPN can't run together. The pause, your plans and App pauses don't use the VPN and keep working.</p>
           </div>
         </details></li>
         <li><details>
@@ -120,13 +146,13 @@
         <li><details>
           <summary>Is it free?</summary>
           <div class="answer">
-            <p>Yes. Redirect is free, with no account and nothing to buy in the app. That covers the pause and breathing, your plans inside the pause, check-ins, the journal, progress, the lessons and toolbox, site blocking with the standard list and protection levels, app pauses, app lock, export, and delete. More features will come in updates.</p>
+            <p>Yes. Redirect is free, with no ads and nothing to buy in the app.</p>
           </div>
         </details></li>
         <li><details>
           <summary>I lost my phone. Is everything gone?</summary>
           <div class="answer">
-            <p>Everything lives only on the phone, and Android's own app backup is switched off on purpose, so a lost or wiped phone can't be recovered. That is the price of having nothing stored anywhere else. An export is a readable copy of your records that you can make at any time and keep somewhere safe; it can't be restored into the app.</p>
+            <p>Redirect has no cloud backup, and Android's own app backup is switched off on purpose. If the phone is lost or wiped, Redirect can't recover your records. That is the price of having nothing stored anywhere else. You can keep an export, a readable copy of your records, somewhere safe, but it can't be restored into the app.</p>
           </div>
         </details></li>
         <li><details>
@@ -137,6 +163,10 @@
         </details></li>
       </ul>
       <p class="guard-foot">Another question? Email <a href="mailto:support@hikmasolutions.co.za">support@hikmasolutions.co.za</a>.</p>
+      <aside class="page-cta" aria-label="Get Redirect">
+        <p>Redirect is free on Android 11 or later.</p>
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.redirect.app" rel="noopener" data-play-link><span data-play-label>Get it on Google Play</span></a>
+      </aside>
     </div>
   </main>
 
@@ -145,7 +175,7 @@
       <div class="footer-grid">
         <div class="footer-about">
           <a class="brand" href="index.html"><svg class="pip-mark" viewBox="18 24 72 54" aria-hidden="true" focusable="false"><g transform="translate(-4.5,-6) translate(54,54) scale(1.22) translate(-54,-54)"><g class="pm-body"><path fill="none" stroke="#4E7F46" stroke-width="1.4" stroke-linecap="round" d="M72.5,55.2 Q74,51 77.5,48.6 M76,56.6 Q79,54 82.4,53.4"/><path fill="#E3A857" d="M76,48.3a1.9,1.9 0 1,0 3.8,0a1.9,1.9 0 1,0 -3.8,0ZM81,53.2a1.9,1.9 0 1,0 3.8,0a1.9,1.9 0 1,0 -3.8,0Z"/><g fill="#A9D07F" stroke="#4E7F46" stroke-width="1.1"><circle cx="38.03" cy="68.81" r="6"/><circle cx="38.03" cy="57.19" r="7.2"/><circle cx="45.5" cy="48.28" r="7.92"/><circle cx="56.95" cy="46.26" r="8.4"/><circle cx="67.02" cy="52.07" r="8.4"/><circle cx="71" cy="63" r="8.6"/></g><g fill="#E4F2C8" fill-opacity=".55"><circle cx="36.28" cy="66.81" r="1.6"/><circle cx="35.93" cy="54.79" r="1.92"/><circle cx="43.19" cy="45.64" r="2.11"/><circle cx="54.5" cy="43.46" r="2.24"/><circle cx="64.57" cy="49.27" r="2.24"/><circle cx="68.2" cy="59.4" r="2.6"/></g><circle cx="71.6" cy="67.4" r="1.9" fill="#F2A58E" fill-opacity=".53"/><circle cx="74.2" cy="62.2" r="1.7" fill="#1C2B24"/><circle cx="73.6" cy="61.5" r=".55" fill="#fff"/></g></g></svg><span>Redirect</span></a>
-          <p>Redirect helps you quit porn, one urge at a time: optional site blocking, a 90-second pause when an urge shows up, and your own plans.</p>
+          <p>Redirect helps you quit porn, one urge at a time.</p>
           <p>Redirect is a self-support tool, not medical treatment, and does not guarantee that content cannot be reached.</p>
         </div>
         <nav class="footer-links" aria-label="Redirect">
@@ -158,19 +188,19 @@
         <nav class="footer-links" aria-label="Trust and press">
           <h2>Trust</h2>
           <a href="privacy.html">Privacy policy</a>
-          <a href="index.html#honesty">Limits</a>
+          <a href="index.html#guardrails">Limits</a>
           <a href="for-allies.html">For allies</a>
           <a href="press.html">Press</a>
         </nav>
-        <div class="footer-links">
+        <div class="footer-links footer-contact">
           <h2>Contact</h2>
           <span>Support: <a href="mailto:support@hikmasolutions.co.za">support@hikmasolutions.co.za</a></span>
-          <span>Made in South Africa</span>
+          <span>Hikma Solutions &middot; South Africa</span>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>No account. No streaks. No ads. This website sets no cookies and loads nothing from anyone else. Requires Android 11 or later.</p>
-        <p>Domain blocklist courtesy of <a href="https://oisd.nl/">OISD</a> (GPLv3). Redirect is not affiliated with or endorsed by OISD.</p>
+        <p>No account. No streaks. No ads. This website sets no cookies and loads nothing from anyone else.</p>
+        <p>Domain blocklist courtesy of <a href="https://oisd.nl/">OISD</a> (GPLv3). Redirect is not affiliated with or endorsed by OISD. Google Play and the Google Play logo are trademarks of Google LLC.</p>
       </div>
     </div>
   </footer>
